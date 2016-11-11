@@ -95,7 +95,11 @@ TEST STUFF*/
             {
                 score += (decimal)(a._rating*a.multiplier);
             }
-            Console.WriteLine("Your Agility Score is "+score);
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            //Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Your Agility Score is "+score);
+            Console.ResetColor();
+            Console.ReadKey();
         }
     }
 }
