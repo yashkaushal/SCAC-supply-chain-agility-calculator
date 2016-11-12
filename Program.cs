@@ -5,7 +5,7 @@ namespace SCAC
     public class Program
     {
 
-        const float numberOfFactors = 2;    //total number of factors
+        const float numberOfFactors = 5;    //total number of factors
         struct factor
         {
             public  int _rating;
@@ -75,18 +75,30 @@ namespace SCAC
             Console.Write(nameof(factor)+" "+speed._rating+" "+speed.multiplier);
 TEST STUFF*/
             factor[] arr = new factor[(int)numberOfFactors];                                             // fill attributes here   and update numberOFFactors
-            arr[0] = new factor("fad");
-            arr[1] = new factor("ass");
+            arr[0] = new factor("Alertness");
+            arr[1] = new factor("accesibility");
+            arr[2] = new factor("Decisiveness");
+            arr[3] = new factor("Swiftness");
+            arr[4] = new factor("Flexibility");
 
-            foreach(factor a in arr)            //for test right now
+
+  /*          foreach(factor a in arr)            //for test right now
             {
                 Console.WriteLine(a.name+" "+a._rating+" "+a.multiplier);
             }
+*/
+
+            Console.Clear();
+            Console.Title= ("Supply Chain Agility Calculator");
+            Console.WriteLine("***SUPPLY CHAIN AGILITY CALCULATOR***\n");
+
 
             for(int i =0; i<numberOfFactors;i++)
             {
-                Console.WriteLine("enter score for "+ arr[i].name+"(Out of 10): ");
+                Console.Write("enter score for "+ arr[i].name+"(Out of 10): ");
                 arr[i].rating = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("");
+
             }
 
             decimal score =0;
@@ -100,6 +112,7 @@ TEST STUFF*/
             Console.Write("Your Agility Score is "+score);
             Console.ResetColor();
             Console.ReadKey();
+            Console.WriteLine("");
         }
     }
 }
