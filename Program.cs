@@ -103,7 +103,11 @@ TEST STUFF*/
 
             Console.Clear();
             Console.Title= ("Supply Chain Agility Calculator");
-            Console.WriteLine("***SUPPLY CHAIN AGILITY CALCULATOR***\n");
+            string s = "***SUPPLY CHAIN AGILITY CALCULATOR***\n";
+            Console.SetCursorPosition((Console.WindowWidth - s.Length) / 2, Console.CursorTop);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine(s);
+            Console.ResetColor();
 
 
             for(int i =0; i<numberOfFactors;i++)
