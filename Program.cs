@@ -77,21 +77,21 @@ TEST STUFF*/
 
             int factornumber = -1;
             factor[] arr = new factor[(int)numberOfFactors];                                             // fill attributes here   and update numberOFFactors
-            arr[++factornumber] = new factor("My company is quick to detect changes in its environment.", m:0.1940657578);
-            arr[++factornumber] = new factor("My company is quick to detect opportunities in its environment.",m:0.1940657578);
-            arr[++factornumber] = new factor("My company is quick to detect threats in its environment.",m:0.1940657578);
-            arr[++factornumber] = new factor("Our suppliers are quick to share relevant information with us.",m:0.1828388132);
-            arr[++factornumber] = new factor("Our customers are quick to share relevant information with us.",m:0.1828388132);
-            arr[++factornumber] = new factor("Usually, we can quickly access the data we need to make decisions.",m:0.1828388132);
-            arr[++factornumber] = new factor("My company has processes in place that allow for quick decision making.",m:0.2173215718);
-            arr[++factornumber] = new factor("My company is fast at making decisions regarding supply chain operations.",m:0.2173215718);
-            arr[++factornumber] = new factor("My company is fast at making decisions regarding supply chain tactics.",m:0.2173215718);
-            arr[++factornumber] = new factor("When it makes decisions regarding a change in its supply chain operations,my company can quickly implement it.",m:0.2068965517);
-            arr[++factornumber] = new factor("When it makes decisions regarding a change in its supply chain tactics,my company can quickly implement it.",m:0.2068965517);
-            arr[++factornumber] = new factor("my company is quick at implementing changes to its supply chain.",m:0.2068965517);
-            arr[++factornumber] = new factor("My company's suppliers can quickly meet an increase in order size.",m:0.1988773055);
-            arr[++factornumber] = new factor("My company's suppliers can quickly adjust the specification of orders.",m:0.1988773055);
-            arr[++factornumber] = new factor("My company's suppliers can quickly adjust/expedite their delivery lead time.",m:0.1988773055);
+            arr[++factornumber] = new factor("My company is quick to detect changes in its environment.", m:0.1940657578/3);
+            arr[++factornumber] = new factor("My company is quick to detect opportunities in its environment.",m:0.1940657578/3);
+            arr[++factornumber] = new factor("My company is quick to detect threats in its environment.",m:0.1940657578/3);
+            arr[++factornumber] = new factor("Our suppliers are quick to share relevant information with us.",m:0.1828388132/3);
+            arr[++factornumber] = new factor("Our customers are quick to share relevant information with us.",m:0.1828388132/3);
+            arr[++factornumber] = new factor("Usually, we can quickly access the data we need to make decisions.",m:0.1828388132/3);
+            arr[++factornumber] = new factor("My company has processes in place that allow for quick decision making.",m:0.2173215718/3);
+            arr[++factornumber] = new factor("My company is fast at making decisions regarding supply chain operations.",m:0.2173215718/3);
+            arr[++factornumber] = new factor("My company is fast at making decisions regarding supply chain tactics.",m:0.2173215718/3);
+            arr[++factornumber] = new factor("When it makes decisions regarding a change in its supply chain operations,my company can quickly implement it.",m:0.2068965517/3);
+            arr[++factornumber] = new factor("When it makes decisions regarding a change in its supply chain tactics,my company can quickly implement it.",m:0.2068965517/3);
+            arr[++factornumber] = new factor("my company is quick at implementing changes to its supply chain.",m:0.2068965517/3);
+            arr[++factornumber] = new factor("My company's suppliers can quickly meet an increase in order size.",m:0.1988773055/3);
+            arr[++factornumber] = new factor("My company's suppliers can quickly adjust the specification of orders.",m:0.1988773055/3);
+            arr[++factornumber] = new factor("My company's suppliers can quickly adjust/expedite their delivery lead time.",m:0.1988773055/3);
 
 
 
@@ -108,7 +108,7 @@ TEST STUFF*/
 
             for(int i =0; i<numberOfFactors;i++)
             {
-                Console.Write(arr[i].name+"(Out of 10): ");
+                Console.Write(arr[i].name+"(Rate Out of 10): ");
                 arr[i].rating = Convert.ToInt16(Console.ReadLine());
                 Console.WriteLine("");
 
