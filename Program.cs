@@ -5,7 +5,7 @@ namespace SCAC
     public class Program
     {
 
-        const float numberOfFactors = 5;    //total number of factors
+        const float numberOfFactors = 15;    //total number of factors
         struct factor
         {
             public  int _rating;
@@ -37,7 +37,7 @@ namespace SCAC
 
 
             }
-            public float multiplier       // can be calculated on basis of number of factors
+            public double multiplier       // can be calculated on basis of number of factors
             {
                 get;
                 set;
@@ -48,7 +48,7 @@ namespace SCAC
                 set;
             }
         
-            public factor( string n, int r =0, float m = 1 / numberOfFactors)
+            public factor( string n, int r =0, double m = 1 / numberOfFactors)
             {
                 this.name = n;
                 this.multiplier = m;
@@ -74,12 +74,14 @@ namespace SCAC
             speed.multiplier =1;
             Console.Write(nameof(factor)+" "+speed._rating+" "+speed.multiplier);
 TEST STUFF*/
+
+            int factornumber = -1;
             factor[] arr = new factor[(int)numberOfFactors];                                             // fill attributes here   and update numberOFFactors
-            arr[0] = new factor("Alertness");
-            arr[1] = new factor("accesibility");
-            arr[2] = new factor("Decisiveness");
-            arr[3] = new factor("Swiftness");
-            arr[4] = new factor("Flexibility");
+            arr[++factornumber] = new factor("My company is quick to detect changes in its environment.", m:0.1940657578);
+            arr[++factornumber] = new factor("My company is quick to detect opportunities in its environment.",m:0.1940657578);
+            arr[++factornumber] = new factor("My company is quick to detect threats in its environment.",m:0.1940657578);
+            arr[++factornumber] = new factor("Our suppliers are quick to share relevant information with us.",m:0.1828388132);
+            arr[++factornumber] = new factor("Our customers are quick to share relevant information with us.",m:0.1828388132);
 
 
   /*          foreach(factor a in arr)            //for test right now
@@ -95,7 +97,7 @@ TEST STUFF*/
 
             for(int i =0; i<numberOfFactors;i++)
             {
-                Console.Write("enter score for "+ arr[i].name+"(Out of 10): ");
+                Console.Write(arr[i].name+"(Out of 10): ");
                 arr[i].rating = Convert.ToInt16(Console.ReadLine());
                 Console.WriteLine("");
 
